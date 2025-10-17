@@ -1,0 +1,151 @@
+<!-- Save as: about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About | Sage Maintenance Services</title>
+  <style>
+    :root{
+      --brand:#1a5c3f;
+      --nav:#144a32;
+      --bg:#f4f6f5;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:#222;
+    }
+
+    /* Header: height driven by logo */
+    header.site-header{
+      background:var(--brand);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      padding:18px 12px; /* makes header visually about same height as large logo */
+    }
+    header.site-header .logo{
+      height:240px;   /* LARGE logo height - change if you'd like bigger/smaller */
+      width:auto;
+      display:block;
+      margin:0;
+    }
+    header.site-header h1{
+      margin:12px 0 0;
+      font-size:26px;
+      letter-spacing:0.3px;
+    }
+
+    /* Global nav - same on both pages */
+    nav.main-nav{
+      background:var(--nav);
+      display:flex;
+      justify-content:center;
+      gap:8px;
+    }
+    nav.main-nav a{
+      color:white;
+      text-decoration:none;
+      padding:14px 20px;
+      display:inline-block;
+      font-weight:600;
+      transition:background .18s;
+    }
+    nav.main-nav a:hover{ background:#1e6a4c; }
+
+    /* Page content */
+    main{
+      max-width:980px;
+      margin:34px auto;
+      padding:0 18px;
+    }
+    .card{
+      background:white;
+      padding:34px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(25,25,25,0.06);
+    }
+
+    h2{ color:var(--brand); margin-top:0; text-align:center; }
+    p{ line-height:1.7; font-size:1.05rem; margin-bottom:1rem; }
+
+    .photo-placeholder{
+      height:340px;
+      border:2px dashed #cfd9d4;
+      background:#e9efe9;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#6a7a6f;
+      font-style:italic;
+      margin:18px 0 26px;
+      border-radius:8px;
+    }
+
+    footer{
+      text-align:center;
+      padding:18px;
+      background:var(--brand);
+      color:white;
+      margin-top:28px;
+    }
+
+    @media (max-width:520px){
+      header.site-header .logo{ height:160px; }
+      header.site-header h1{ font-size:20px; }
+      nav.main-nav a{ padding:12px 14px; font-size:15px; }
+      .photo-placeholder{ height:220px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <!-- Put your logo file named sms.PNG in the same folder as this file -->
+    <img class="logo" src="sms.PNG" alt="Sage Maintenance Services logo">
+    <h1>Sage Maintenance Services</h1>
+  </header>
+
+  <nav class="main-nav" role="navigation" aria-label="Main">
+    <a href="./about.html">Home</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <article class="card" aria-labelledby="about-title">
+      <div class="photo-placeholder">Photo Placeholder — Team / Service Image</div>
+
+      <h2 id="about-title">About Us</h2>
+
+      <p>
+        Sage Maintenance Services provides professional, reliable, and high-quality commercial cleaning services across the region.
+        Our mission is to deliver spotless and hygienic environments that support the success of every business we serve.
+      </p>
+
+      <p>
+        We specialize in office, industrial, and retail cleaning, with a focus on sustainability and excellence. Our experienced staff
+        is trained to uphold the highest standards in cleanliness, efficiency, and customer satisfaction.
+      </p>
+
+      <p>
+        Whether you manage a small business or a large facility, our team tailors cleaning solutions to your specific needs—from daily janitorial
+        service to scheduled deep cleaning and specialty disinfection. We use eco-friendly products where possible and follow strict quality
+        control processes to ensure consistent results.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Sage Maintenance Services
+  </footer>
+
+  <script>
+    // simple helper to keep copyright year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
